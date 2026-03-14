@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
 class DoublyLinkedList {
@@ -64,7 +66,7 @@ public:
 			tail = newNode; // Inserting at the end
 		temp->next = newNode;
 	}
-	void delete_node(int value) {
+	void delete_val(int value) {
 		if (!head) return; // Empty list
 		Node* temp = head;
 		while (temp && temp->data != value)
@@ -87,13 +89,16 @@ public:
 
 	void delete_pos(int pos) {
 		if (!head || pos < 0) {
-			return; // Empty list
+			return; // Empty list or invalid pos
 		}
 		Node* temp = head;
 		for (int i = 0; i < pos && temp; i++) { //loop through list until node is found at pos
 			temp = temp->next;
 		}
-		if (!temp) return; // Value not found
+		if (!temp) {  // pos not found
+			cout << "Position not found" << endl;
+			return;
+		}
 		
 		if (temp->prev) {
 			temp->prev->next = temp->next;
@@ -113,6 +118,7 @@ public:
 	void pop_front() {
 		if (!head) { //check empty list
 			cout << "List is empty" << endl;
+			return;
 		}
 
 		Node* temp = head;
@@ -131,6 +137,7 @@ public:
 	void pop_back() {
 		if (!head) { //check empty list
 			cout << "List is empty" << endl;
+			return;
 		}
 
 		Node* temp = tail;
@@ -147,7 +154,10 @@ public:
 	}
 	void print() {
 		Node* current = head;
-		if (!current) return;
+		if (!head) { //check empty list
+			cout << "List is empty" << endl;
+			return;
+		}
 		while (current) {
 			cout << current->data << " ";
 			current = current->next;
@@ -156,7 +166,10 @@ public:
 	}
 	void print_reverse() {
 		Node* current = tail;
-		if (!current) return;
+		if (!tail) { //check empty list
+			cout << "List is empty" << endl;
+			return;
+		}
 		while (current) {
 			cout << current->data << " ";
 			current = current->prev;
@@ -173,17 +186,35 @@ public:
 };
 // Driver program
 int main() {
+	srand(time(0));
 	DoublyLinkedList list;
 	int size = rand() % (MAX_LS - MIN_LS + 1) + MIN_LS;
 	for (int i = 0; i < size; ++i)
 		list.push_back(rand() % (MAX_NR - MIN_NR + 1) + MIN_NR);
-	cout << "List forward: ";
+	cout << "List forward: " << endl;
 	list.print();
-	cout << "List backward: ";
+	cout << "List backward: " << endl;
 	list.print_reverse();
-	cout << "Deleting list, then trying to print.\n";
-	list.~DoublyLinkedList();
-	cout << "List forward: ";
+	cout << "Push front 100" << endl;
+	list.push_front(100);
+	list.print();
+	cout << "Push front 200" << endl;
+	list.push_front(200);
+	list.print();
+	cout << "Push back 300" << endl;
+	list.push_back(300);
+	list.print();
+	cout << "Delete position 2:" << endl;
+	list.delete_pos(2);
+	list.print();
+	cout << "Delete value 200:" << endl;
+	list.delete_val(200);
+	list.print();
+	cout << "Pop front:" << endl;
+	list.pop_front();
+	list.print();
+	cout << "Pop back:" << endl;
+	list.pop_back();
 	list.print();
 	return 0;
 }

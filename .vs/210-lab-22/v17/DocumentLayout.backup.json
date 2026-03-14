@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dylan\\source\\repos\\210-lab-22\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03C3E045-0033-4BE8-8095-2814DC3596DE}|210-lab-22.vcxproj|C:\\Users\\dylan\\source\\repos\\210-lab-22\\210-lab-22.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{03C3E045-0033-4BE8-8095-2814DC3596DE}|210-lab-22.vcxproj|solutionrelative:210-lab-22.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "210-lab-22.cpp",
+              "DocumentMoniker": "C:\\Users\\dylan\\source\\repos\\210-lab-22\\210-lab-22.cpp",
+              "RelativeDocumentMoniker": "210-lab-22.cpp",
+              "ToolTip": "C:\\Users\\dylan\\source\\repos\\210-lab-22\\210-lab-22.cpp*",
+              "RelativeToolTip": "210-lab-22.cpp*",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAJ0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-14T10:41:40.661Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
